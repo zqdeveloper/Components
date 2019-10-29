@@ -1,10 +1,19 @@
-package com.Component.activity;
+package com.component.sample;
 
+import android.content.Context;
 import android.os.Bundle;
 
-public class BaseCWAbsModule extends CWAbsModule {
+import com.component.activity.BaseCWAbsModule;
+import com.component.activity.CWModuleContext;
+
+public class PageNameModule extends BaseCWAbsModule {
+
+    private Context context;
+
     @Override
     public boolean init(CWModuleContext cwModuleContext, Bundle extend) {
+        context = cwModuleContext.getContext();
+
         return false;
     }
 

@@ -1,4 +1,4 @@
-package com.Component.activity;
+package com.component.activity;
 
 import android.app.Activity;
 import android.os.Build;

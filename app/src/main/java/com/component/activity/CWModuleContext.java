@@ -1,4 +1,4 @@
-package com.Component.activity;
+package com.component.activity;
 
 import android.content.Context;
 import android.os.Bundle;
