@@ -2,6 +2,7 @@ package com.component.activity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.collection.SparseArrayCompat;
@@ -10,7 +11,7 @@ public class CWModuleContext
 {
     private Context context;
     private Bundle saveInstance;
-    private SparseArrayCompat<ViewGroup>  viewGroups = new SparseArrayCompat<ViewGroup>();
+    private SparseArrayCompat<View>  viewGroups = new SparseArrayCompat<View>();
 
     public Context getContext() {
         return context;
@@ -28,11 +29,11 @@ public class CWModuleContext
         this.saveInstance = saveInstance;
     }
 
-    public SparseArrayCompat<ViewGroup> getViewGroups() {
+    public SparseArrayCompat<View> getViewGroups() {
         return viewGroups;
     }
 
-    public void setViewGroups(SparseArrayCompat<ViewGroup> viewGroups) {
+    public void setViewGroups(SparseArrayCompat<View> viewGroups) {
         this.viewGroups = viewGroups;
     }
 }

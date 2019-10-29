@@ -2,6 +2,7 @@ package com.component.sample;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.collection.SparseArrayCompat;
@@ -12,7 +13,7 @@ import com.component.activity.CWModuleContext;
 public class PageNameModule extends BaseCWAbsModule {
 
     private Context context;
-    private SparseArrayCompat<ViewGroup> viewGroups;
+    private SparseArrayCompat<View> viewGroups;
 
 
     @Override

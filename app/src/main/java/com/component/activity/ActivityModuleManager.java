@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.ArrayMap;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.RequiresApi;
@@ -28,11 +29,11 @@ public class ActivityModuleManager extends ModuleManager {
                 CWModuleContext moduleContext = new CWModuleContext();
                 moduleContext.setContext(activity);
                 moduleContext.setSaveInstance(saveInstance);
-                SparseArrayCompat<ViewGroup> viewGroups = new SparseArrayCompat<>();
+                SparseArrayCompat<View> viewGroups = new SparseArrayCompat<>();
                 ArrayList<Integer> mViewIds = getModules().get(moduleName);
                 if (mViewIds!=null) {
                     for (int i=0; i<mViewIds.size(); i++) {
-                        viewGroups.put(mViewIds.get(i),(ViewGroup)activity.findViewById(mViewIds.get(i)));
+                        viewGroups.put(mViewIds.get(i),activity.findViewById(mViewIds.get(i)));
                     }
                 }
                 moduleContext.setViewGroups(viewGroups);
