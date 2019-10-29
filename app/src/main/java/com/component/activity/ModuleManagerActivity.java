@@ -17,22 +17,19 @@ public abstract class ModuleManagerActivity extends AppCompatActivity {
     private ActivityModuleManager moduleManager;
 
     @Override
-    protected void onCreate(@Nullable final Bundle savedInstanceState) {
+    protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().getDecorView().getRootView().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-            @Override
-            public void onGlobalLayout() {
-                if (moduleManager==null){
-                    moduleManager = new ActivityModuleManager();
-                    moduleManager.initModules(savedInstanceState,ModuleManagerActivity.this,moduleConfig());
-                    getWindow().getDecorView().getRootView().getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                }
-            }
-        });
+        setContentView(getContentView());
+        if (moduleManager == null){
+            moduleManager = new ActivityModuleManager();
+            moduleManager.initModules(savedInstanceState,ModuleManagerActivity.this,moduleConfig());
+        }
     }
 
+    public abstract int getContentView();
+
     public abstract ArrayMap<String, ArrayList<Integer>> moduleConfig();
+
 
     @Override
     protected void onResume() {

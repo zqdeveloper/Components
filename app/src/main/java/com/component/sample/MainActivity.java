@@ -14,11 +14,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends ModuleManagerActivity {
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int getContentView() {
+        return R.layout.activity_main;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
