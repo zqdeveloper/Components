@@ -1,4 +1,4 @@
-package com.component.activity
+package com.component.base.activity
 
 import org.junit.Test
 
