@@ -1,8 +1,8 @@
-package com.component.activity;
+package com.component.base;
 
 import android.os.Bundle;
 
-public class BaseCWAbsModule extends CWAbsModule {
+public abstract class BaseCWAbsModule extends CWAbsModule {
     @Override
     public boolean init(CWModuleContext cwModuleContext, Bundle extend) {
         return false;
@@ -10,6 +10,11 @@ public class BaseCWAbsModule extends CWAbsModule {
 
     @Override
     public void onSaveInstance(Bundle outState) {
+
+    }
+
+    @Override
+    public void onStart() {
 
     }
 

@@ -1,4 +1,4 @@
-package com.component.activity;
+package com.component.base;
 
 import android.content.res.Configuration;
 import android.os.Build;
@@ -30,6 +30,13 @@ public class ModuleManager {
         return null;
     }
 
+    public void onStart() {
+        for (CWAbsModule module: allmodules.values()) {
+            if (module!=null) {
+                module.onStart();
+            }
+        }
+    }
 
 
     public void onReume() {

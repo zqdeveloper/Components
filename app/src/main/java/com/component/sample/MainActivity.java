@@ -1,14 +1,12 @@
 package com.component.sample;
 
 import android.os.Build;
-import android.os.Bundle;
 import android.util.ArrayMap;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import com.component.activity.ModuleManagerActivity;
-import com.component.activity.R;
+import com.component.base.activity.ModuleManagerActivity;
+import com.component.base.activity.R;
 
 import java.util.ArrayList;
 

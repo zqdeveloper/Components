@@ -1,6 +1,8 @@
-package com.component.activity;
+package com.component.base;
 
 import android.os.Bundle;
+
+import com.component.base.CWModuleContext;
 
 public abstract class CWAbsModule {
     public abstract boolean init(CWModuleContext cwModuleContext, Bundle extend);
@@ -16,4 +18,6 @@ public abstract class CWAbsModule {
     public abstract void onOrientationChanges(boolean isLandscape);
 
     public abstract void onDestory();
+
+    public abstract void onStart();
 }

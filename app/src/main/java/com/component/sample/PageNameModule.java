@@ -3,12 +3,11 @@ package com.component.sample;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.collection.SparseArrayCompat;
 
-import com.component.activity.BaseCWAbsModule;
-import com.component.activity.CWModuleContext;
+import com.component.base.BaseCWAbsModule;
+import com.component.base.CWModuleContext;
 
 public class PageNameModule extends BaseCWAbsModule {
 

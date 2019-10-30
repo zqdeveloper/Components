@@ -1,10 +1,9 @@
-package com.component.activity;
+package com.component.base.activity;
 
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.ArrayMap;
-import android.view.ViewTreeObserver;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +29,11 @@ public abstract class ModuleManagerActivity extends AppCompatActivity {
 
     public abstract ArrayMap<String, ArrayList<Integer>> moduleConfig();
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        moduleManager.onStart();
+    }
 
     @Override
     protected void onResume() {

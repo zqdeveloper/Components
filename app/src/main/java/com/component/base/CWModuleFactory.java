@@ -1,4 +1,4 @@
-package com.component.activity;
+package com.component.base;
 
 public class CWModuleFactory {
     public static CWAbsModule newModuleInstance(String name)

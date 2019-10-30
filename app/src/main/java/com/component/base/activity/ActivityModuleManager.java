@@ -1,14 +1,18 @@
-package com.component.activity;
+package com.component.base.activity;
 
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.RequiresApi;
 import androidx.collection.SparseArrayCompat;
+
+import com.component.base.CWAbsModule;
+import com.component.base.CWModuleContext;
+import com.component.base.CWModuleFactory;
+import com.component.base.ModuleManager;
 
 import java.util.ArrayList;
 
