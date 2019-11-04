@@ -1,5 +1,6 @@
 package com.component.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -8,15 +9,16 @@ import androidx.collection.SparseArrayCompat;
 
 public class CWModuleContext
 {
-    private Context context;
+    private Activity context;
     private Bundle saveInstance;
+
     private SparseArrayCompat<View>  viewGroups = new SparseArrayCompat<View>();
 
-    public Context getContext() {
+    public Activity getContext() {
         return context;
     }
 
-    public void setContext(Context context) {
+    public void setContext(Activity context) {
         this.context = context;
     }
 

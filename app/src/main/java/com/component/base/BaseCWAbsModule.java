@@ -1,10 +1,15 @@
 package com.component.base;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 public abstract class BaseCWAbsModule extends CWAbsModule {
+    protected Activity context;
+    protected CWModuleContext cwModuleContext;
     @Override
     public boolean init(CWModuleContext cwModuleContext, Bundle extend) {
+        this.context = cwModuleContext.getContext();
+        this.cwModuleContext = cwModuleContext;
         return false;
     }
 
